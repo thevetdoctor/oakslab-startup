@@ -17,16 +17,74 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+"""phase"""
+type Phase {
+  id: ID!
+  title: String!
+  order: Float!
+  description: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""task"""
+type Task {
+  id: ID!
+  title: String!
+  order: Float!
+  description: String
+  phaseId: String!
+  phase: Phase!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""companytask"""
+type CompanyTask {
+  id: ID!
+  companyId: String!
+  phaseId: String!
+  taskId: String!
+  active: Boolean!
+  status: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
 type Query {
   getCompanies: [Company!]!
+  getPhases: [Phase!]!
+  getTasks: [Task!]!
+  getTasksByCompany(companyId: String!): [CompanyTask!]!
 }
 
 type Mutation {
   createCompany(company: CreateCompanyDTO!): Company!
+  createPhase(phase: CreatePhaseDTO!): Phase!
+  createTask(task: CreateTaskDTO!): Task!
+  doTask(task: DoTaskDTO!): CompanyTask!
 }
 
 input CreateCompanyDTO {
   name: String!
   email: String!
   description: String!
+}
+
+input CreatePhaseDTO {
+  title: String!
+  order: Float!
+  description: String!
+}
+
+input CreateTaskDTO {
+  title: String!
+  order: Float!
+  description: String!
+  phaseId: String!
+}
+
+input DoTaskDTO {
+  companyId: String!
+  taskId: String!
 }

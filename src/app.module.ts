@@ -5,6 +5,8 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { DatabaseModule } from './database/database.module';
 import { CompanyModule } from './modules/company/company.module';
+import { PhaseModule } from './modules/phase/phase.module';
+import { TaskModule } from './modules/task/task.module';
 
 @Module({
   imports: [
@@ -13,9 +15,13 @@ import { CompanyModule } from './modules/company/company.module';
       autoSchemaFile: 'schema.gql'
     }),
     DatabaseModule,
-    CompanyModule
+    CompanyModule,
+    PhaseModule,
+    TaskModule
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+    [x: string]: any;
+}
