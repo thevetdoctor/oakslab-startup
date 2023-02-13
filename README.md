@@ -25,7 +25,12 @@ $ npm run start:prod
 ```
 The API can be interacted with via the graphQL playground at /graphql of the root URL
 ```
+```
+A Postman documentation URL is also published to guide interaction with the API
 
+https://documenter.getpostman.com/view/80410/2s935uGgAL
+
+```
 
 ## Test
 
