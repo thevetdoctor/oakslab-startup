@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { DefaultResponseDTO } from './dto';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHello(): DefaultResponseDTO {
+    return { message: 'Welcome to Oakslab Startup API!' };
   }
 }

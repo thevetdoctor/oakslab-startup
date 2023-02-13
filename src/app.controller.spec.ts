@@ -15,8 +15,8 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return "Welcome to Oakslab Startup API!"', () => {
+      expect(appController.getHello()).toStrictEqual({ message: 'Welcome to Oakslab Startup API!' });
     });
   });
 });
