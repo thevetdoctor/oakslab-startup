@@ -1,4 +1,6 @@
 import { Sequelize, ModelCtor } from 'sequelize-typescript';
+import { Company } from 'src/entities/company.model';
+import { Phase } from 'src/entities/phase.model';
 
 export const DatabaseProviders = [{
     provide: Sequelize,
@@ -9,7 +11,7 @@ export const DatabaseProviders = [{
             logging: false,
         });
         
-        sequelize.addModels([]);
+        sequelize.addModels([Company, Phase]);
 
         await sequelize.sync({alter: true});
         return sequelize; 
