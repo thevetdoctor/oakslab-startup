@@ -1,0 +1,11 @@
+# Dockerfile
+# .dockerignore
+# node_modules
+# npm-debug.log
+# dist
+node_modules
+npm-debug.log
+*.log
+coverage1
+/graphql_*
+

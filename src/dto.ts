@@ -1,3 +1,3 @@
 export class DefaultResponseDTO {
-    message: string
+  message: string;
 }

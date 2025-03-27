@@ -1,13 +1,13 @@
-import { InputType, Field } from "@nestjs/graphql";
+import { InputType, Field } from '@nestjs/graphql';
 
 @InputType()
-export class CreatePhaseDTO{
-    @Field()
-    title: string;
+export class CreatePhaseDTO {
+  @Field()
+  title: string;
 
-    @Field()
-    order: number;
+  @Field()
+  order: number;
 
-    @Field()
-    description: string;
+  @Field()
+  description: string;
 }

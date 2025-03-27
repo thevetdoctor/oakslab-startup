@@ -26,12 +26,15 @@
     "@nestjs/graphql": "^10.2.0",
     "@nestjs/platform-express": "^9.0.0",
     "apollo-server-express": "^3.11.1",
+    "axios": "^1.8.4",
+    "crypto-js": "^4.2.0",
     "graphql": "^16.6.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "sequelize": "^6.28.0",
     "sequelize-typescript": "^2.1.5",
-    "sqlite3": "^5.1.4"
+    "sqlite3": "^5.1.4",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
@@ -74,6 +77,6 @@
     "testEnvironment": "node",
     "moduleNameMapper": {
       "^src/(.*)$": "<rootDir>/$1"
-    } 
+    }
   }
 }

@@ -1,13 +1,13 @@
-import { InputType, Field } from "@nestjs/graphql";
+import { InputType, Field } from '@nestjs/graphql';
 
 @InputType()
-export class CreateCompanyDTO{
-    @Field()
-    name: string;
+export class CreateCompanyDTO {
+  @Field()
+  name: string;
 
-    @Field()
-    email: string;
+  @Field()
+  email: string;
 
-    @Field()
-    description: string;
+  @Field()
+  description: string;
 }

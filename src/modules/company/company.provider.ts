@@ -1,7 +1,9 @@
-import { COMPANY_REPOSITORY } from "../../constants";
-import { Company } from "../../entities/company.model";
+import { Company } from 'src/entities';
+import { COMPANY_REPOSITORY } from 'src/utils';
 
-export const CompanyProviders = [{
+export const CompanyProviders = [
+  {
     provide: COMPANY_REPOSITORY,
     useValue: Company,
-}];
+  },
+];
