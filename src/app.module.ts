@@ -14,6 +14,9 @@ import { LoggerMiddleware, GatewayAuthMiddleware } from './middlewares';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: 'schema.gql',
+      playground: true,  // Ensure Playground is enabled
+      introspection: true, // Allow introspection queries
+      persistedQueries: false,
     }),
     DatabaseModule,
     CompanyModule,
